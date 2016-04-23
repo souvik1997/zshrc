@@ -60,7 +60,9 @@ export PATH="/Users/souvik/.bin/:/Users/souvik/.local/bin/:/usr/local/opt/coreut
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-
+bindkey "^[^[[D" backward-word
+bindkey "^[^[[C" forward-word
+bindkey "^[w" copy-region-as-kill
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 

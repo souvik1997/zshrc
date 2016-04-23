@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/souvik/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -56,7 +56,7 @@ export EDITOR="/usr/bin/env emacsclient -a '' -nw"
 export VISUAL=$EDITOR
 alias cdt="cd $(mktemp -d)"
 alias e="$EDITOR"
-export PATH="/Users/souvik/.bin/:/Users/souvik/.local/bin/:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:"
+export PATH="~/bin/bin/:~/.bin/:~/.local/bin/:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

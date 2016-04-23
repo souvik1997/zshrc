@@ -58,7 +58,9 @@ alias cdt="cd $(mktemp -d)"
 alias e="$EDITOR"
 export PATH="~/bin/bin/:~/.bin/:~/.local/bin/:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*:match:*' original only
+zstyle ':completion:*:approximate:*' max-errors 10 numeric
 source $ZSH/oh-my-zsh.sh
 bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word

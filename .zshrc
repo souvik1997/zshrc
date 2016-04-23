@@ -62,7 +62,9 @@ zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:match:*' original only
 zstyle ':completion:*:approximate:*' max-errors 10 numeric
 source $ZSH/oh-my-zsh.sh
-
+bindkey "^[^[[D" backward-word
+bindkey "^[^[[C" forward-word
+bindkey "^[w" copy-region-as-kill
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 

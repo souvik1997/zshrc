@@ -56,8 +56,6 @@ export EDITOR="/usr/bin/env emacsclient -a '' -nw"
 export VISUAL=$EDITOR
 alias cdt="cd $(mktemp -d)"
 alias e="$EDITOR"
-export PATH="$HOME/bin/bin/:$HOME/.bin/:$HOME/.local/bin/:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:match:*' original only
 zstyle ':completion:*:approximate:*' max-errors 10 numeric

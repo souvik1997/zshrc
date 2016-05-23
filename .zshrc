@@ -49,12 +49,12 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $HOME/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions mercurial)
 
 # User configuration
 export EDITOR="/usr/bin/env emacsclient -a '' -nw"
 export VISUAL=$EDITOR
-alias cdt="cd $(mktemp -d)"
+alias cdt="cd \$(mktemp -d)"
 alias e="$EDITOR"
 zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:match:*' original only
@@ -87,4 +87,6 @@ bindkey "^[w" copy-region-as-kill
 # Example aliases
 # alias zshconfig="mate $HOME/.zshrc"
 # alias ohmyzsh="mate $HOME/.oh-my-zsh"
+PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

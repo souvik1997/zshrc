@@ -91,4 +91,4 @@ bindkey "^[w" copy-region-as-kill
 # alias ohmyzsh="mate $HOME/.oh-my-zsh"
 PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 
-${HOME}/.zsh_isiterm2.sh && test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+"${HOME}/.zsh_isiterm2.sh" && test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

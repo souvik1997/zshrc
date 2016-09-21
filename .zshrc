@@ -65,6 +65,15 @@ bindkey "^[^[[C" forward-word
 bindkey "^[[1;3D" backward-word
 bindkey "^[[1;3C" forward-word
 bindkey "^[w" copy-region-as-kill
+function ediff() {
+    if [ "X${2}" = "X" ]; then
+	echo "USAGE: ediff <FILE 1> <FILE 2>"
+    else
+	# The --eval flag takes lisp code and evaluates it with EMACS
+	e --eval "(ediff-files \"$1\" \"$2\")"
+    fi
+}
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
